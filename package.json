@@ -1,0 +1,26 @@
+{
+  "name": "postcss",
+  "version": "1.0.0",
+  "description": "PostCSS",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlesAnthonyBrowne/PostCSS-Tutorial.git"
+  },
+  "author": "Charles Browne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CharlesAnthonyBrowne/PostCSS-Tutorial/issues"
+  },
+  "homepage": "https://github.com/CharlesAnthonyBrowne/PostCSS-Tutorial#readme",
+  "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "gulp-postcss": "^6.0.1",
+    "postcss-mixins": "^1.0.1",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^1.0.1"
+  }
+}
