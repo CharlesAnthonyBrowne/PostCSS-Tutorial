@@ -8,7 +8,7 @@ This stylesheet is just to show some functions that are perfectly fine and can b
 
 # PostCSS
 PostCSS is just plain CSS. I'm writing plain CSS in `main.css` however, i'm able to use `$variables` that i'm used to using from SASS.
-This is achieveble via our gulp task.
+This is achievable via our gulp task.
 
 # PostCSS - Downside
-The only negative i've found is the extra time needed to take setting up the gulp task. But this can be easily overcome with a slight learning curve.
+The only negative i've found is the extra time needed to take setting up the gulp task. But it isn't much more work and after a few times setting up your gulp task you can easily modularize it.
