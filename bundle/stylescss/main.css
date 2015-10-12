@@ -1,11 +1,14 @@
-@import "_vars";
+/* ================================================= */
+/* DELCARE VARIABLES */
+/* ================================================= */
+/* ================================================= */
 
 html, body {
   padding: 0;
   margin: 0;
-  font-style: $sans;
-  font-size: $font-md;
-  background: red;
+  font-style: "Apercu Regular", Calibri, sans-serif;
+  font-size: 1em;
+  background: #1c1c1c;
 }
 
 #h-container {
@@ -13,3 +16,5 @@ html, body {
   margin: 20px;
 
 }
+
+/*# sourceMappingURL=main.css.map */
