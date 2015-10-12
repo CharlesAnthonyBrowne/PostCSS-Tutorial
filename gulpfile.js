@@ -2,31 +2,26 @@ var
 	gulp = require('gulp'),
 	postcss = require('gulp-postcss'),
   vars   = require('postcss-simple-vars')
+  concat = require('gulp-concat');
+	autoprefixer = require('autoprefixer');
 	processors = [
 		require('postcss-mixins'),
 		require('postcss-simple-vars'),
 		require('postcss-nested'),
-		require('autoprefixer-core')({ browsers: ['last 2 versions', '> 2%'] })
+		require('autoprefixer')({ browsers: ['last 2 versions', '> 2%'] })
 	];
 
-  // compile CSS
-  gulp.task('css', function () {
-     return gulp.src('./postcss/**/*.css')
-        // .pipe(postcss([ vars({ variables: colors }) ]))
-        .pipe(postcss([ require('postcss-simple-vars')({ silent: true }) ]))
-        .pipe(gulp.dest('./bundle/stylescss/main.css'));
+// Watch task
+gulp.task('watch', function(){
+  gulp.watch('./postcss/**/*.css', ['css']);
 });
 
-  // gulp.task('css', function() {
-  //   return gulp.src('postcss/**/*.css')
-  //     .pipe(postcss(processors))
-  //     .pipe(gulp.dest('./bundle/stylescss/'));
-  // });
+// compile CSS
+gulp.task('css', function () {
+   return gulp.src('./postcss/**/*.css')
+      // .pipe(postcss([ vars({ variables: colors }) ]))
+      .pipe(postcss(processors))
+      .pipe(gulp.dest('./bundle/stylescss/'));
+});
 
-  gulp.task('sass', function() {
-      gulp.src('sass/**/*.scss')
-          .pipe(sass().on('error', sass.logError))
-          .pipe(gulp.dest('./bundle/stylescss'));
-  });
-
-gulp.task('default', ["css", 'sass']);
+gulp.task('default', ["css", 'watch']);

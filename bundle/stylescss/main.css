@@ -1,0 +1,15 @@
+@import "_vars";
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-style: $sans;
+  font-size: $font-md;
+  background: red;
+}
+
+#h-container {
+  padding: 20px;
+  margin: 20px;
+
+}
