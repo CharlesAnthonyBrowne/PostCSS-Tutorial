@@ -17,10 +17,11 @@ var
 	];
 
 // Watch task
-// gulp.task('watch', function(){
-//   gulp.watch('./postcss/**/*.css', ['css']);
-// });
+gulp.task('watch', function(){
+  gulp.watch('./postcss/**/*.css', ['css']);
+});
 
+// Compile task
 gulp.task('css', function () {
     return gulp.src('./postcss/*.css')
         .pipe(sourcemaps.init())
@@ -30,4 +31,4 @@ gulp.task('css', function () {
 });
 
 
-gulp.task('default', ["css"]);
+gulp.task('default', ["css", "watch"]);
